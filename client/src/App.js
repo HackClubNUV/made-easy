@@ -1,9 +1,10 @@
 import React from 'react';
+import { Text } from '@chakra-ui/react';
 
 const App = () => {
   return (
     <div>
-      <h1>hello world</h1>
+      <Text fontSize="2xl">Hello world</Text>
     </div>
   );
 }
