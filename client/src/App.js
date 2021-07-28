@@ -1,11 +1,13 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Switch, Route } from 'react-router-dom';
+
+import HomeScreen from './screens/HomeScreen';
 
 const App = () => {
   return (
-    <div>
-      <Text fontSize="2xl">Hello world</Text>
-    </div>
+    <Switch>
+      <Route path="/" component={HomeScreen} />
+    </Switch>
   );
 }
 
