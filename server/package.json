@@ -13,9 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "pg-hstore": "^2.3.4"
   },
   "devDependencies": {
+    "eslint": "^7.31.0",
     "nodemon": "^2.0.12"
   }
 }
