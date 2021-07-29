@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To Discord Oauth</h1>
+    <div id="info">
+        Hoi
+    </div>
+    <a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=797155989359034379&redirect_uri=http%3A%2F%2Fa5c22845abd3.ngrok.io%2Fdiscord&response_type=code&scope=identify">Identify Yourself</a>
+    <script>
+        window.onload = () => {
+            const fragment = new URLSearchParams(window.location.hash.slice(1));
+		    const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+    		if (!accessToken) {
+    			return document.getElementById('login').style.display = 'block';
+    		}
+        }
+    </script>
+</body>
+</html>
