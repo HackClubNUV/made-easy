@@ -6,17 +6,35 @@ export const UserSchema = new Schema({
         required: true,
         unique: true
     }, 
+    fullname: {
+        type: String,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+    },
     A1:{
         type: Boolean,
+        required: true,
+        default: false,
     },
     A2:{
         type: Boolean,
+        required: true,
+        default: false,
     },
     A3:{
         type: Boolean,
+        required: true,
+        default: false,
     },
     A4:{
         type: Boolean,
+        required: true,
+        default: false,
     },
     created_at: {
         type: Date,
