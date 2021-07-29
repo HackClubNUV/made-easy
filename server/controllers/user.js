@@ -17,3 +17,9 @@ export const getUserProgres = async (req,res) => {
     if(user.err) console.log(user.err);
     return res.status('200').json({status: 'success', data: user});
 }
+
+export const getAllUsers = async (req,res) => {
+    const users = await User.find();
+    console.log(users);
+    return res.status(200).json({status: 'success', data: users})
+}

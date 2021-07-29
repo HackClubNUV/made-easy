@@ -1,6 +1,7 @@
 import express from 'express';
 const User = express.Router();
-import {getUserProgres} from '../controllers/user.js'
+import {getUserProgres, getAllUsers} from '../controllers/user.js'
 
 User.route('/').get(getUserProgres);
+User.route('/users').get(getAllUsers);
 export {User};
