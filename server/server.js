@@ -13,8 +13,10 @@ import {Router} from './routes/webhook.js'
 import {User} from './routes/User.js'
 app.use('/webhook', Router);
 app.use('/progress', User);
-app.get('/', (req,res) => res.send('hello world'));
-
+// if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../client/build'));
+  app.use('*', express.static('../client/build'));
+// }
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 });
