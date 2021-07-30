@@ -28,11 +28,7 @@ const HomeScreen = () => {
             </Flex>
             <Container maxW="container.lg" paddingX={{ base: "5", md: "12" }} marginBottom="8">
                 <Text textAlign={{ base: "justify", md: "center" }}>
-                    Elit mollit duis eu laboris ut mollit laboris et non nisi sunt ea. Qui adipisicing incididunt duis
-                    ad dolore. Fugiat ipsum esse eiusmod consequat excepteur consectetur dolore aliquip sit cillum.
-                    Quis duis excepteur ex commodo ipsum non nisi minim. Do amet do et anim consequat reprehenderit.
-                    Magna aliquip labore laboris pariatur est adipisicing laborum exercitation exercitation. Excepteur
-                    amet mollit est eiusmod laboris nisi ex nisi magna exercitation incididunt sint.
+                Hey hackers! We're glad that you've taken interest in joining the team. We believe in the power of community and we want to share the same with you. We are looking for members who love to take initiative and are always up to learn and build something new. <br/>This is an Online Portal that our team has created to help you get updates about your application process.
                 </Text>
             </Container>
             <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
