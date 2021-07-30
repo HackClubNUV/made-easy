@@ -8,16 +8,16 @@ class Auth {
         }
     }
 
-    login(redirectPath) {
+    login(token,exp) {
         this.authenticated = true;
         localStorage.setItem(
             'auth',
             JSON.stringify({
                 authStatus: true,
-                // token: token
+                token: token,
+                exp: exp
             })
         );
-        redirectPath();
     }
 
     logout(redirectPath) {
@@ -29,6 +29,11 @@ class Auth {
     isAuthenticated() {
         return this.authenticated;
     }
+
+    getAuthToken() {
+        return JSON.parse(localStorage.getItem('auth')).token;
+    }
+
 }
 
 export default new Auth();

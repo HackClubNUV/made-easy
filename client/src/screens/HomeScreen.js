@@ -1,7 +1,16 @@
 import React from 'react';
-import { Container, Flex, Text, Button, Image } from '@chakra-ui/react';
+import { Container, Flex, Text, Button, Image, Link } from '@chakra-ui/react';
 
-import Img from '../assets/hero-img.png';
+import Img from '../assets/hero-img.gif';
+import auth from '../helper/auth';
+
+const discordAuth = () => {
+    window.open(
+        `https://discord.com/api/oauth2/authorize?client_id=869925134188830720&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapply&response_type=token&scope=identify`,
+        "_parent"
+    );
+    auth.login();
+}
 
 const HomeScreen = () => {
     return (
@@ -18,7 +27,7 @@ const HomeScreen = () => {
                 >&nbsp;Application Process</Text>
             </Flex>
             <Container maxW="container.lg" paddingX={{ base: "5", md: "12" }} marginBottom="8">
-                <Text textAlign={{ base: "justify", md:"center" }}>
+                <Text textAlign={{ base: "justify", md: "center" }}>
                     Elit mollit duis eu laboris ut mollit laboris et non nisi sunt ea. Qui adipisicing incididunt duis
                     ad dolore. Fugiat ipsum esse eiusmod consequat excepteur consectetur dolore aliquip sit cillum.
                     Quis duis excepteur ex commodo ipsum non nisi minim. Do amet do et anim consequat reprehenderit.
@@ -32,12 +41,15 @@ const HomeScreen = () => {
                     marginBottom={{ base: "3", md: "0" }}
                     colorScheme="red"
                     borderRadius="25"
-                >Authenticate with Discord</Button>
-                <Button borderRadius="25">Join our Discord server</Button>
+                    onClick={discordAuth}
+                >Login with Discord</Button>
+                <Link href="https://discord.gg/tx5afx6RYd" isExternal target="_blank">
+                    <Button borderRadius="25">Join our Discord server</Button>
+                </Link>
             </Flex>
             <Image
                 marginTop="1"
-                boxSize={{ base: "300", md:"400" }}
+                boxSize={{ base: "300", md: "400" }}
                 objectFit="cover"
                 src={Img}
                 alt="Application"
