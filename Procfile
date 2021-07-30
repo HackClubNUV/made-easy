@@ -1,1 +1,1 @@
-web npm start --prefix server
+web npm install --prefix server --only=prod && npm install --prefix client --only=prod && npm run build --prefix client && npm start --prefix server
