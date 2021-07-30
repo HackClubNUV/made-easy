@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import auth from './helper/auth';
 
-function App() {
+import ProtectedRoute from './routes/protected.route';
+
+import HomeScreen from './screens/HomeScreen';
+import ProgressScreen from './screens/ProgressScreen';
+
+const App = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    const currentTime = Date.now() / 1000;
+    if (!localStorage.getItem('auth') &&
+      (localStorage.getItem('auth') &&
+        JSON.parse(localStorage.getItem('auth').exp < currentTime
+      ))
+    ) {
+      auth.logout(() => { history.replace('/') });
+    }
+    else {
+      history.push('/apply');
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <ProtectedRoute path="/apply" component={ProgressScreen}/>
+      <Route path="/" component={HomeScreen} />
+    </Switch>
   );
 }
 
