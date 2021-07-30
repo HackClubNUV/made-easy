@@ -21,12 +21,14 @@ const stepBox = (title, desc,done, line) => {
     </React.Fragment>
 }
 
-const ProgressContainer = () => {
+const ProgressContainer = ({progress}) => {
     return (
         <Container maxW="container.lg" paddingY="10" centerContent>
             <Flex flexDirection="column" alignItems="center">
-                {data.slice(0, -1).map((item) => stepBox(item.title, item.desc,item.done, true))}
-                {stepBox(data.slice(-1)[0].title, data.slice(-1)[0].desc, data.slice(-1)[0].done, false)}
+                {stepBox(data[0].title, data[0].desc, progress[0], true)}
+                {stepBox(data[1].title, data[1].desc, progress[1],true)}
+                {stepBox(data[2].title, data[2].desc, progress[2], true)}
+                {stepBox(data[3].title, data[3].desc, progress[3], false)}
             </Flex>
         </Container>
     )

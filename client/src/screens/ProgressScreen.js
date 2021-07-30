@@ -11,6 +11,7 @@ const ProgressScreen = () => {
     const history = useHistory();
     const [username, setUsername] = useState('');
     const [discriminator, setDiscriminator] = useState('');
+    const [progress, setProgress] = useState([false, false, false, false]);
 
     const logout = useCallback(() => {
         auth.logout(() => {
@@ -20,15 +21,21 @@ const ProgressScreen = () => {
 
     const getProgress = useCallback(
         async () => {
-            const data = {
-                "DiscordID": username + "#" + discriminator,
-                "username": username
+            if (username && discriminator) {
+                const reqData = {
+                    "DiscordID": username + "#" + discriminator,
+                    "username": username
+                }
+                const headers = {
+                    "Content-type": "application/json; charset=UTF-8",
+                    "Authorization": `Bearer ${auth.getAuthToken()}`
+                };
+                const response = await axios.post('/progress', reqData, { headers });
+                if (response.data.status === "success") {
+                    const res = response.data.data;
+                    setProgress([res['A1'], res['A2'], res['A3'], res['A4']]);
+                }
             }
-            const headers = {
-                "Content-type": "application/json; charset=UTF-8",
-            };
-            const response = await axios.post('/progress', data, { headers });
-            console.log(response.data);
         }, [username, discriminator]
     );
 
@@ -46,11 +53,12 @@ const ProgressScreen = () => {
                 const { username, discriminator } = response.data;
                 setUsername(username);
                 setDiscriminator(discriminator);
+                getProgress();
             } catch {
                 logout();
             }
         },
-        [logout],
+        [logout, getProgress],
     );
 
     useEffect(() => {
@@ -62,8 +70,7 @@ const ProgressScreen = () => {
         }
         history.replace('/apply');
         getUserDetails(auth.getAuthToken(), 'Bearer');
-        getProgress();
-    }, [history, getUserDetails, getProgress]);
+    }, [history, getUserDetails]);
 
 
     return (
@@ -87,11 +94,11 @@ const ProgressScreen = () => {
                 <Link
                     href={data[0].done ? null : "https://form.typeform.com/to/XxJd05Qn"}
                     isExternal target="_blank">
-                    <Button colorScheme="red" borderRadius="25" paddingX="8" disabled={data[0].done ? true : false}>
+                    <Button colorScheme="red" borderRadius="25" paddingX="8" disabled={progress[0]? true : false}>
                         Apply now
                     </Button>
                 </Link>
-                <ProgressContainer />
+                <ProgressContainer progress={progress}/>
             </Container>
         </>
     )
