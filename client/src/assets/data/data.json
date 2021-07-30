@@ -1,22 +1,22 @@
 [
     {
         "title": "Step 1",
-        "desc": "Adipisicing minim ea commodo nisi quis incididunt nostrud in deserunt consequat nisi non reprehenderit.Adipisicing occaecat amet sit qui excepteur magna labore anim fugiat.",
+        "desc": "The first step is pretty easy. Just fill out the application form given above and let us know you are interested in joining the Hack Club NUV Team! ",
         "done": false
     },
     {
         "title": "Step 2",
-        "desc": "Adipisicing minim ea commodo nisi quis incididunt nostrud in deserunt consequat nisi non reprehenderit.Adipisicing occaecat amet sit qui excepteur magna labore anim fugiat.",
+        "desc": "Now that you have applied, just sit tight while we review your applications. We'll get back to you soon via email, and let you know our decision regardless of the verdict.",
         "done": false
     },
     {
         "title": "Step 3",
-        "desc": "Adipisicing minim ea commodo nisi quis incididunt nostrud in deserunt consequat nisi non reprehenderit.Adipisicing occaecat amet sit qui excepteur magna labore anim fugiat.",
+        "desc": "Once you are accepted, you can now have a trial run for your selected posting. We expect you to take initiative and help out with the community. This will allow you to get to know the team as well as the workflow. Don't worry, we'll help you along with everything",
         "done": false
     },
     {
         "title": "Step 4",
-        "desc": "Adipisicing minim ea commodo nisi quis incididunt nostrud in deserunt consequat nisi non reprehenderit.Adipisicing occaecat amet sit qui excepteur magna labore anim fugiat.",
+        "desc": "If you had fun in the trial run and want to become a part of the team, we can have an informal discussion to start your onboarding process!!",
         "done": false
     }
 ]

@@ -27,8 +27,8 @@ const ProgressScreen = () => {
             const headers = {
                 "Content-type": "application/json; charset=UTF-8",
             };
-            // const response = await axios.post('/getUserProgress', data, { headers });
-            // console.log(response.data);
+            const response = await axios.post('/progress', data, { headers });
+            console.log(response.data);
         }, [username, discriminator]
     );
 
@@ -78,9 +78,10 @@ const ProgressScreen = () => {
                 >Hi {username.length > 0 ? username + "!" : 'there!'}</Text>
                 <Container maxW="container.lg" paddingX={{ base: "5", md: "12" }} marginY="5">
                     <Text textAlign={{ base: "justify", md: "center" }}>
-                        Minim enim ut ipsum magna esse proident consequat esse nisi. Ipsum amet Lorem laboris
-                        Lorem excepteur sunt cillum voluptate ad velit pariatur sit. Excepteur consectetur nulla
-                        reprehenderit velit ex pariatur dolore eu consequat laborum consectetur deserunt tempor ut.
+                        We are happy to see you consider joining Hack Club NUV! We have tailored this process such a way,
+                        that its easy for both the new members and the existing members to get to know each other and work well
+                        together. Our primary goal is to help the community and learn new things along the way!
+                        Get started with your application process by filling the application form linked below :)
                     </Text>
                 </Container>
                 <Link
