@@ -4,6 +4,7 @@
   "description": "Application process for Hack Club Nuv's Interview Process",
   "main": "server.js",
   "scripts": {
+    "heroku-postbuild": "npm install --prefix server --only=prod && npm install --prefix client --only=prod && npm run build --prefix client && npm start --prefix server",
     "start": "\"cd server && npm start\" ",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
   },
