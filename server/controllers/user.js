@@ -12,10 +12,17 @@ export const getUserProgres = async (req,res) => {
         return res.status('401').json({status: "no discord id available"})
     }
     console.log(DiscordID, username);
-    const user = await User.create({DiscordID, username})
-    console.log(await user, ' created');
-    if(user.err) console.log(user.err);
-    return res.status('200').json({status: 'success', data: user});
+    const user1 = await User.findOne({DiscordID});
+    if(!user1){ 
+        const user = await User.create({DiscordID, username})
+        console.log(await user, ' created');
+        if(user.err) console.log(user.err);
+        return res.status('200').json({status: 'success', data: user});
+    }
+    else if(user1){
+        console.log(await user1);
+        return res.status('200').json({status: 'success', data: user1})
+    }
 }
 
 export const getAllUsers = async (req,res) => {
