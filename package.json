@@ -2,8 +2,9 @@
   "name": "made-easy",
   "version": "1.0.0",
   "description": "Application process for Hack Club Nuv's Interview Process",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "\"cd server && npm start\" ",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
   },
   "repository": {
