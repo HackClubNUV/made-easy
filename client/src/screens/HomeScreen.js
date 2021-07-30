@@ -6,7 +6,7 @@ import auth from '../helper/auth';
 
 const discordAuth = () => {
     window.open(
-        `https://discord.com/api/oauth2/authorize?client_id=869925134188830720&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapply&response_type=token&scope=identify`,
+        `https://discord.com/api/oauth2/authorize?client_id=797155989359034379&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fapply&response_type=token&scope=identify`,
         "_parent"
     );
     auth.login();
