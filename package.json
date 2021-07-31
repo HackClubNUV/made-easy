@@ -21,5 +21,8 @@
   "homepage": "https://github.com/HackClubNUV/made-easy#readme",
   "devDependencies": {
     "concurrently": "^6.2.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2"
   }
 }
