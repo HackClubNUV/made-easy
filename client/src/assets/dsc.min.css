@@ -1,4 +1,10 @@
 /* From Google developer student clubs - Chapter Danang university of science and Technology with love <3 */
+:root {
+  --color-red: #ea4335;
+  --color-blue: #4285f4;
+  --color-yellow: #fbbc05;
+  --color-green: #34a853;
+}
 .loader {
   position: relative;
   width: 225px;
@@ -13,44 +19,45 @@
 .dot1 {
   top: 55px;
   background-color: var(--color-blue);
+  /* background-color: #fff000; */
   transform-origin: 20px center;
-  animation: dsc-dot1 6s infinite ease-in-out;
+  animation: dsc-dot1 8s infinite ease-in-out;
   z-index: 2;
 }
 .dot2 {
   left: 62.5px;
   top: 55px;
   background-color: var(--color-red);
-  animation: dsc-dot2 6s infinite ease-in-out;
+  animation: dsc-dot2 8s infinite ease-in-out;
 }
 .dot3 {
   bottom: 0;
   left: 62.5px;
   background-color: var(--color-green);
-  animation: dsc-dot3 6s infinite ease-in-out;
+  animation: dsc-dot3 8s infinite ease-in-out;
 }
 .dot4 {
   left: 62.5px;
   background-color: var(--color-green);
-  animation: dsc-dot4 6s infinite ease-in-out;
+  animation: dsc-dot4 8s infinite ease-in-out;
 }
 .dot5 {
   left: 62.5px;
   top: 55px;
   background-color: var(--color-green);
-  animation: dsc-dot5 6s infinite ease-in-out;
+  animation: dsc-dot5 8s infinite ease-in-out;
 }
 .dot6 {
   left: 62.5px;
   bottom: 0;
   background-color: var(--color-yellow);
-  animation: dsc-dot6 6s infinite ease-in-out;
+  animation: dsc-dot6 8s infinite ease-in-out;
 }
 .dot7 {
   top: 55px;
   background-color: var(--color-red);
   transform-origin: 20px center;
-  animation: dsc-dot7 6s infinite ease-in-out;
+  animation: dsc-dot7 8s infinite ease-in-out;
   z-index: 1;
 }
 @keyframes dsc-dot1 {

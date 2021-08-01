@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import auth from './helper/auth';
-
+import './assets/font.css'
 import ProtectedRoute from './routes/protected.route';
 
 import HomeScreen from './screens/HomeScreen';
