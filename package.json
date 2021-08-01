@@ -1,24 +1,24 @@
 {
-  "name": "made-easy",
+  "name": "application-portal",
   "version": "1.0.0",
   "description": "Application process for Hack Club Nuv's Interview Process",
   "main": "server.js",
   "scripts": {
-    "heroku-postbuild": "npm install --prefix server --only=prod && npm install --prefix client --only=prod && npm run build --prefix client",
+    "install": "npm install --prefix server --only=prod && npm install --prefix client --only=prod && npm run build --prefix client",
     "start": "npm start --prefix server",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HackClubNUV/made-easy.git"
+    "url": "git+github.com/DSCNUV/Application-Portal.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HackClubNUV/made-easy/issues"
+    "url": "https://github.com/DSCNUV/Application-Portal/issues"
   },
-  "homepage": "https://github.com/HackClubNUV/made-easy#readme",
+  "homepage": "https://github.com/DSCNUV/Application-Portal#readme",
   "devDependencies": {
     "concurrently": "^6.2.0"
   },
