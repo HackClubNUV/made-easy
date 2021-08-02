@@ -85,14 +85,14 @@ const ProgressScreen = () => {
                 >Hi {username.length > 0 ? username + "!" : 'there!'}</Text>
                 <Container maxW="container.lg" paddingX={{ base: "5", md: "12" }} marginY="5">
                     <Text textAlign={{ base: "justify", md: "center" }}>
-                        We are happy to see you consider joining Hack Club NUV! We have tailored this process such a way,
+                        We are happy to see you consider joining <b>Google Developer Student Clubs NUV!</b> We have tailored this process with the help of <b>Hack Club NUV</b> in such way,
                         that its easy for both the new members and the existing members to get to know each other and work well
                         together. Our primary goal is to help the community and learn new things along the way!
                         Get started with your application process by filling the application form linked below :)
                     </Text>
                 </Container>
                 <Link
-                    href={data[0].done ? null : "https://form.typeform.com/to/XxJd05Qn"}
+                    href={data[0].done ? null : "https://form.typeform.com/to/xTb9xAro"}
                     isExternal target="_blank">
                     <Button colorScheme="red" borderRadius="25" paddingX="8" disabled={progress[0]? true : false}>
                         Apply now
