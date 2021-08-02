@@ -50,7 +50,7 @@ const HomeScreen = () => {
 
             <Container maxW="container.lg" paddingX={{ base: "5", md: "13" }} marginBottom="3">
                 <Text textAlign={{ base: "justify", md: "center" }}  fontSize={{base:"13", md:'17'}}>
-                Hey Fellow developers welcome to the Online Portal for Google Developer Student Clubs. Become a part of our community and connect with developers. Login with your discord account, to enroll yourself in the process of recruitment. We've described a four step process to make you confortable with the community and help you with contribution.<br/>We at GDSC NUV believe that developers together can make a great change in the ecosystem if we come together and build community driven projects.
+                Hey Fellow developers Welcome to the Online Portal for Google Developer Student Clubs. Become a part of our community and connect with developers. Login with your discord account, to enroll yourself in the process of recruitment. We've described a four step process to make you confortable with the community and help you with contribution.<br/>We at GDSC NUV believe that developers together can make a great change in the ecosystem if we come together and build community driven projects.
                 </Text>
             </Container>
             {/* <div className="loader">
