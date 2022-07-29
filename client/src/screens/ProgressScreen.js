@@ -92,7 +92,7 @@ const ProgressScreen = () => {
                     </Text>
                 </Container>
                 <Link
-                    href={data[0].done ? null : "https://form.typeform.com/to/xTb9xAro"}
+                    href={data[0].done ? null : "https://s684h2u3rzr.typeform.com/to/NRmubCZ0"}
                     isExternal target="_blank">
                     <Button colorScheme="red" borderRadius="25" paddingX="8" disabled={progress[0]? true : false}>
                         Apply now
