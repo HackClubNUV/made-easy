@@ -23,6 +23,10 @@
     "concurrently": "^6.2.0"
   },
   "dependencies": {
-    "chokidar": "^3.5.2"
+    "chokidar": "^3.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
   }
 }
