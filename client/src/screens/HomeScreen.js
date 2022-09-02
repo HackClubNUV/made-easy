@@ -9,7 +9,7 @@ import auth from '../helper/auth';
 
 const discordAuth = () => {
   window.open(
-    `https://discord.com/api/oauth2/authorize?client_id=871148961191297074&redirect_uri=https%3A%2F%2Fgdscnuv.herokuapp.com%2Fapply&response_type=token&scope=identify%20email`,
+    `https://discord.com/api/oauth2/authorize?client_id=1002481981281534002&redirect_uri=https%3A%2F%2Fgdscnuv-applications.herokuapp.com%2Fapply&response_type=code&scope=identify%20email`,
     '_parent'
   );
   auth.login();
